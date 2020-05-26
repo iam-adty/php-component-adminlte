@@ -38,23 +38,5 @@
             "vendor/almasaeed2010/adminlte/dist/": "public/assets/vendor/adminlte/",
             "vendor/almasaeed2010/adminlte/plugins/": "public/assets/vendor/adminlte/plugins/"
         }
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../php-config"
-        },
-        {
-            "type": "path",
-            "url": "../php-variable"
-        },
-        {
-            "type": "path",
-            "url": "../php-component"
-        },
-        {
-            "type": "path",
-            "url": "../php-component-html"
-        }
-    ]
+    }
 }
