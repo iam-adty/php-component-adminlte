@@ -10,7 +10,9 @@
         }
     ],
     "require": {
-        "iam-adty/php-component-html": "dev-master"
+        "iam-adty/php-component-html": "dev-develop",
+        "slowprog/composer-copy-file": "~0.3",
+        "almasaeed2010/adminlte": "~3.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -21,5 +23,38 @@
     },
     "require-dev": {
         "kint-php/kint": "^3.3"
-    }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "SlowProg\\CopyFile\\ScriptHandler::copy"
+        ],
+        "post-update-cmd": [
+            "@composer dump-autoload",
+            "SlowProg\\CopyFile\\ScriptHandler::copy"
+        ]
+    },
+    "extra": {
+        "copy-file": {
+            "vendor/almasaeed2010/adminlte/dist/": "public/assets/vendor/adminlte/",
+            "vendor/almasaeed2010/adminlte/plugins/": "public/assets/vendor/adminlte/plugins/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../php-config"
+        },
+        {
+            "type": "path",
+            "url": "../php-variable"
+        },
+        {
+            "type": "path",
+            "url": "../php-component"
+        },
+        {
+            "type": "path",
+            "url": "../php-component-html"
+        }
+    ]
 }
