@@ -8,9 +8,11 @@ use IamAdty\Component\Html\Link;
 
 class Style extends Component
 {
-    public function __construct()
+    public function __construct(...$params)
     {
-        parent::__construct(...[
+        parent::__construct(...$params);
+
+        $this->children = [
             Link::build(
                 Rel::set("stylesheet"),
                 HRef::set("assets/vendor/adminlte/plugins/fontawesome-free/css/all.min.css")
@@ -51,7 +53,7 @@ class Style extends Component
                 Rel::set("stylesheet"),
                 HRef::set("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700")
             )
-        ]);
+        ] + $this->children;
     }
 
     use ComponentBuilderTrait;

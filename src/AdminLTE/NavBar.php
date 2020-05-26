@@ -8,14 +8,12 @@ use IamAdty\Component\Html\Navigation;
 
 class NavBar extends Component
 {
-    public function __construct()
+    public function construct()
     {
-        parent::__construct(...[
-            Navigation::build(
-                Class_::set("main-header navbar navbar-expand navbar-white navbar-light"),
-                LeftNavBar::build()
-            )
-        ]);
+        return Navigation::build(
+            Class_::set("main-header navbar navbar-expand navbar-white navbar-light"),
+            LeftNavBar::build()
+        )->construct();
     }
 
     use ComponentBuilderTrait;

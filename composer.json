@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "iam-adty/php-component-page": "dev-develop",
         "iam-adty/php-component-html": "dev-develop",
         "slowprog/composer-copy-file": "~0.3",
         "almasaeed2010/adminlte": "~3.0"

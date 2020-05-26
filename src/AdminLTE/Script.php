@@ -7,9 +7,9 @@ use IamAdty\Component\Html\Script as HtmlScript;
 
 class Script extends Component
 {
-    public function __construct()
+    public function construct()
     {
-        parent::__construct(...[
+        $this->children = array_merge([
             HtmlScript::build(
                 Source::set("assets/vendor/adminlte/plugins/jquery/jquery.min.js")
             ),
@@ -61,7 +61,9 @@ class Script extends Component
             HtmlScript::build(
                 Source::set("assets/vendor/adminlte/js/demo.js")
             )
-        ]);
+        ], $this->children);
+
+        return parent::construct();
     }
 
     use ComponentBuilderTrait;

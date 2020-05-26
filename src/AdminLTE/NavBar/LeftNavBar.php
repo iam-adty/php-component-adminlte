@@ -15,44 +15,42 @@ use IamAdty\Component\Html\UnOrderedList;
 
 class LeftNavBar extends Component
 {
-    public function __construct()
+    public function construct()
     {
-        parent::__construct(...[
-            UnOrderedList::build(
-                Class_::set("navbar-nav"),
-                Item::build(
-                    Class_::set("nav-item"),
-                    Anchor::build(
-                        Class_::set("nav-link"),
-                        Data::set(
-                            Name::set(),
-                            Value::set("pushmenu")
-                        ),
-                        HRef::set("#"),
-                        Role::set("button"),
-                        Italic::build(
-                            Class_::set("fas fa-bars")
-                        )
-                    )
-                ),
-                Item::build(
-                    Class_::set("nav-item d-none d-sm-inline-block"),
-                    Anchor::build(
-                        Class_::set("nav-link"),
-                        Href::set("#"),
-                        "Home"
-                    )
-                ),
-                Item::build(
-                    Class_::set("nav-item d-none d-sm-inline-block"),
-                    Anchor::build(
-                        Href::set("#"),
-                        Class_::set("nav-link"),
-                        "Contact"
+        return UnOrderedList::build(
+            Class_::set("navbar-nav"),
+            Item::build(
+                Class_::set("nav-item"),
+                Anchor::build(
+                    Class_::set("nav-link"),
+                    Data::set(
+                        Name::set(),
+                        Value::set("pushmenu")
+                    ),
+                    HRef::set("#"),
+                    Role::set("button"),
+                    Italic::build(
+                        Class_::set("fas fa-bars")
                     )
                 )
+            ),
+            Item::build(
+                Class_::set("nav-item d-none d-sm-inline-block"),
+                Anchor::build(
+                    Class_::set("nav-link"),
+                    Href::set("#"),
+                    "Home"
+                )
+            ),
+            Item::build(
+                Class_::set("nav-item d-none d-sm-inline-block"),
+                Anchor::build(
+                    Href::set("#"),
+                    Class_::set("nav-link"),
+                    "Contact"
+                )
             )
-        ]);
+        )->construct();
     }
 
     use ComponentBuilderTrait;

@@ -10,9 +10,9 @@ use IamAdty\Component\Html\Meta as HtmlMeta;
 
 class Meta extends Component
 {
-    public function __construct()
+    public function construct()
     {
-        parent::__construct(...[
+        $this->children = array_merge([
             HtmlMeta::build(
                 Charset::set("utf-8")
             ),
@@ -24,7 +24,9 @@ class Meta extends Component
                 Name::set("viewport"),
                 Content::set("width=device-width, initial-scale=1")
             )
-        ]);
+        ], $this->children);
+
+        return parent::construct();
     }
 
     use ComponentBuilderTrait;
