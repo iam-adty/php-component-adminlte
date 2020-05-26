@@ -13,7 +13,7 @@ class Style extends Component
         parent::__construct(...[
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/plugins/fontawesome-free/css/all.min.css")
+                HRef::set("assets/vendor/adminlte/plugins/fontawesome-free/css/all.min.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
@@ -21,31 +21,31 @@ class Style extends Component
             ),
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")
+                HRef::set("assets/vendor/adminlte/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css")
+                HRef::set("assets/vendor/adminlte/plugins/icheck-bootstrap/icheck-bootstrap.min.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/plugins/jqvmap/jqvmap.min.css")
+                HRef::set("assets/vendor/adminlte/plugins/jqvmap/jqvmap.min.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/css/adminlte.min.css")
+                HRef::set("assets/vendor/adminlte/css/adminlte.min.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css")
+                HRef::set("assets/vendor/adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/plugins/daterangepicker/daterangepicker.css")
+                HRef::set("assets/vendor/adminlte/plugins/daterangepicker/daterangepicker.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
-                HRef::set("public/assets/vendor/adminlte/plugins/summernote/summernote-bs4.css")
+                HRef::set("assets/vendor/adminlte/plugins/summernote/summernote-bs4.css")
             ),
             Link::build(
                 Rel::set("stylesheet"),
